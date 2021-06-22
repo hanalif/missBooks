@@ -1,0 +1,333 @@
+
+@font-face {
+    font-family: amaranth-bold;
+    src: url('/fonts/amaranth/Amaranth-Bold.ttf');
+}
+
+@font-face {
+    font-family: amaranth-regular;
+    src: url('/fonts/amaranth/Amaranth-Regular.ttf');
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: amaranth-regular;
+}
+
+
+/* HEADER */
+
+.app-header{
+    background-color: rgb(243, 243, 161);
+    height: 100px;
+    margin-bottom: 20px;
+   
+  
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    height: inherit;
+    justify-content: space-between;
+}
+
+
+/* BOOK-FILTER */
+
+.book-filter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+}
+
+.books-search-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    
+}
+
+.search-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+    width: inherit;
+}
+
+.search-container:not(:first-child){
+    gap: 12px;
+}
+
+
+
+.search-label{
+    margin-inline-end: 10px;
+}
+
+/* BOOK-APP */
+
+/* BOOK-LIST */
+
+.book-list{
+    display: grid;
+    justify-content: center;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    list-style: none;
+}
+
+.book-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.book-preview-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-family: amaranth-bold, sans-serif;
+    border-bottom: 1px solid black;
+    padding-top: 35px;
+}
+
+
+.book-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.book-preview-img{
+    width: 80%;
+    border-radius: 5px 5px 0 0;
+}
+
+.book-btn{
+    font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 14px;
+}
+
+.book-price{
+    font-size: 30px;
+}
+
+
+.book-btn::after {
+  content: "";
+  background-color: #ffe54c;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.book-btn:hover::after {
+  top: 0px;
+  left: 0px;
+}
+
+/* BOOKS-DETAILS */
+
+.prev-next-book-container{
+    display: flex;
+    gap: 35px;
+}
+.book-details{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.book-details-img{
+    position: relative;
+}
+.book-details-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.aside-book-details{
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    align-items: center;
+    justify-content: space-between;
+    height: 392px;
+    position: relative;
+}
+
+.review-preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   margin: 16px;
+
+}
+
+.review-stars-container{
+    display: flex;
+}
+.delete-review-btn{
+    width: 53px;
+}
+
+
+.low-price{
+    color: green;
+}
+
+.high-price{
+    color: red;
+}
+
+.book-details-name{
+    font-size: 30px;
+}
+
+.sale-container{
+    position: absolute;
+    background-color: rgb(252, 252, 126);
+    height: 38px;
+    width: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -34px;
+    top: 115px;
+    transform: rotateZ(20deg);
+}
+/* REVIEW-ADD */
+
+.review-add{
+    position: absolute;
+    margin: 0 auto;
+    background-color: rgb(240, 240, 193);
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    z-index: 0;
+    padding: 18px;
+    border-radius: 5px;
+}
+
+.review-add form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    position: relative;
+}
+
+.backdrop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.3;
+}
+
+.close-review-modal-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* REVIEWS */
+
+.reviews-container{
+    border-top: 1px solid black;
+    width: 100%;
+    margin-top: 20px;
+}
+/* STAR-RATING */
+
+.star-raiting{
+    display: flex;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.app-footer{
+    background-color: rgb(243, 243, 161);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* USER-MSG */
+
+.user-msg{
+    position:absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.success{
+    background-color: rgb(97, 221, 97);
+}
+
+.error {
+    background-color: rgb(238, 107, 107);
+}
+/* HELPERS */
+
+
+.main-layout{
+    max-width: 1060px;
+    margin: 0 auto;
+    padding-right: 1.4rem;
+    padding-left: 1.4rem;
+}
+
+
+
+@media (max-width: 630px){
+  .book-details-container{
+      flex-direction: column;
+      gap: 20px;
+  }
+  .search-container{
+      flex-direction: column;
+  }
+}
